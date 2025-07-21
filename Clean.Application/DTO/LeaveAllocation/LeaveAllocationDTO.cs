@@ -1,7 +1,8 @@
 ﻿using Clean.Application.DTO.Common;
+using Clean.Application.DTO.LeaveType;
 using Clean.Domain.Models;
 
-namespace Clean.Application.DTO
+namespace Clean.Application.DTO.LeaveAllocation
 {
     public class LeaveAllocationDTO : BaseDTO
     {

@@ -1,6 +1,6 @@
 ﻿using Clean.Application.DTO.Common;
 
-namespace Clean.Application.DTO
+namespace Clean.Application.DTO.LeaveType
 {
     public class LeaveTypeDTO : BaseDTO
     {
