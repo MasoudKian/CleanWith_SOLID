@@ -1,13 +1,15 @@
 ﻿using Clean.Application.DTO.Common;
-using Clean.Application.DTO.LeaveType;
-using Clean.Domain.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Clean.Application.DTO.LeaveAllocation
 {
-    public class LeaveAllocationDTO : BaseDTO
+    public class CreateLeaveAllocationDto : BaseDTO, ILeaveAllocationDto
     {
         public int NumberOfDays { get; set; }
-        public LeaveTypeDTO? LeaveTypeDTO { get; set; }
         public int LeaveTypeId { get; set; }
         public int Period { get; set; }
     }
