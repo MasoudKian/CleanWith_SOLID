@@ -9,7 +9,9 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="15.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
     <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,15 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTO\LeaveAllocation\Validators\" />
-    <Folder Include="DTO\LeaveRequest\Validators\" />
-    <Folder Include="DTO\LeaveType\Validators\" />
     <Folder Include="Features\LeaveAllocations\Handlers\Command\" />
     <Folder Include="Features\LeaveAllocations\Requests\Command\" />
-    <Folder Include="Features\LeaveRequests\Handlers\Command\" />
-    <Folder Include="Features\LeaveRequests\Requests\Command\" />
-    <Folder Include="Features\LeaveTypes\Handlers\Command\" />
-    <Folder Include="Features\LeaveTypes\Requests\Command\" />
   </ItemGroup>
 
 </Project>
