@@ -18,14 +18,9 @@
 
   <ItemGroup>
     <Folder Include="Features\LeaveAllocations\Handlers\Command\" />
-    <Folder Include="Features\LeaveAllocations\Handlers\" />
-    <Folder Include="Features\LeaveAllocations\Handlers\Queries\" />
     <Folder Include="Features\LeaveAllocations\Requests\Command\" />
-    <Folder Include="Features\LeaveAllocations\Requests\Queries\" />
     <Folder Include="Features\LeaveRequests\Handlers\Command\" />
-    <Folder Include="Features\LeaveRequests\Handlers\Queries\" />
     <Folder Include="Features\LeaveRequests\Requests\Command\" />
-    <Folder Include="Features\LeaveRequests\Requests\Queries\" />
     <Folder Include="Features\LeaveTypes\Handlers\Command\" />
     <Folder Include="Features\LeaveTypes\Requests\Command\" />
   </ItemGroup>

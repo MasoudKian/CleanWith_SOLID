@@ -2,7 +2,9 @@
 
 namespace Clean.Application.Persistence.Contract.EntitiesRepository
 {
-    internal interface ILeaveAllocationRepository : IGenericRepository<LeaveAllocation>
+    public interface ILeaveAllocationRepository : IGenericRepository<LeaveAllocation>
     {
+        Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetails();
+        Task<LeaveAllocation> GetLeaveAllocationWithDetails(int id);
     }
 }
