@@ -1,13 +1,9 @@
 ﻿using AutoMapper;
 using Clean.Application.DTO.LeaveType.Validators;
+using Clean.Application.Exceptions;
 using Clean.Application.Features.LeaveTypes.Requests.Command;
 using Clean.Application.Persistence.Contract.EntitiesRepository;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Clean.Application.Features.LeaveTypes.Handlers.Command
 {
@@ -30,7 +26,7 @@ namespace Clean.Application.Features.LeaveTypes.Handlers.Command
             var validationResult = await validator.ValidateAsync(request.LeaveTypeDto);
 
             if (validationResult.IsValid == false)
-                throw new ValidationException(validationResult);
+                throw new ValidationExceptions(validationResult);
 
             var leaveType = await leaveTypeRepository.GetEntity(request.LeaveTypeDto.Id);
             mapper.Map(request.LeaveTypeDto, leaveType);

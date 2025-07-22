@@ -10,13 +10,23 @@ namespace Clean.Application.Profiles
     {
         public MappingProfile()
         {
-            // LeaveRequestList
-            CreateMap<LeaveRequest,LeaveRequestDTO>().ReverseMap();
-            CreateMap<LeaveRequest,LeaveRequestListDTO>().ReverseMap();
+            #region LeaveRequest Mapping
+            CreateMap<LeaveRequest, LeaveRequestDTO>().ReverseMap();
+            CreateMap<LeaveRequest, LeaveRequestListDTO>().ReverseMap();
+            CreateMap<LeaveRequest, CreateLeaveRequestsDTO>().ReverseMap();
+            CreateMap<LeaveRequest, UpdateLeaveRequestDto>().ReverseMap();
+            #endregion
 
+            #region LeaveAllocation Mapping
+            CreateMap<LeaveAllocation, LeaveAllocationDTO>().ReverseMap();
+            CreateMap<LeaveAllocation, CreateLeaveAllocationDto>().ReverseMap();
+            CreateMap<LeaveAllocation, UpdateLeaveAllocationDto>().ReverseMap();
+            #endregion
 
-            CreateMap<LeaveType,LeaveTypeDTO>().ReverseMap();
-            CreateMap<LeaveAllocation,LeaveAllocationDTO>().ReverseMap();
+            #region LeaveType Mapping
+            CreateMap<LeaveType, LeaveTypeDTO>().ReverseMap();
+            CreateMap<LeaveType, CreateLeaveTypeDto>().ReverseMap();
+            #endregion
         }
     }
 }
