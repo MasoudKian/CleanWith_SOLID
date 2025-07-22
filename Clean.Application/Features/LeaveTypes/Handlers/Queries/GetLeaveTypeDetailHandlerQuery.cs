@@ -6,15 +6,16 @@ using MediatR;
 
 namespace Clean.Application.Features.LeaveTypes.Handlers.Queries
 {
-    public class GetLeaveTypeListHandlerQuery
-        : IRequestHandler<GetLeaveTypeListRequestQuery, List<LeaveTypeDTO>>
+    public class GetLeaveTypeDetailHandlerQuery
+        : IRequestHandler<GetLeaveTypeDetailRequestQuery, LeaveTypeDTO>
     {
+
         #region ctor - DI
 
         private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly IMapper _mapper;
 
-        public GetLeaveTypeListHandlerQuery(ILeaveTypeRepository leaveTypeRepository, IMapper mapper)
+        public GetLeaveTypeDetailHandlerQuery(ILeaveTypeRepository leaveTypeRepository, IMapper mapper)
         {
             _leaveTypeRepository = leaveTypeRepository;
             _mapper = mapper;
@@ -22,11 +23,13 @@ namespace Clean.Application.Features.LeaveTypes.Handlers.Queries
 
         #endregion
 
-        public async Task<List<LeaveTypeDTO>> Handle(GetLeaveTypeListRequestQuery request
+        public async Task<LeaveTypeDTO> Handle(GetLeaveTypeDetailRequestQuery request
             , CancellationToken cancellationToken)
         {
-            var leaveTypeList = await _leaveTypeRepository.GetAllEntities();
-            var mapModel = _mapper.Map<List<LeaveTypeDTO>>(leaveTypeList);
+            var leaveType = await _leaveTypeRepository.GetEntity(request.LeaveTypeId);
+            if (leaveType == null) throw new Exception($" Leave Type : {leaveType} is null ... ");
+
+            var mapModel = _mapper.Map<LeaveTypeDTO>(leaveType);
             return mapModel;
         }
     }

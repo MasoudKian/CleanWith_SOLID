@@ -6,7 +6,7 @@
         Task<TEntity> CreateAsync(TEntity entity);
         Task<IReadOnlyList<TEntity>> GetAllEntities();
 
-        void Delete(TEntity entity);
-        void Update(TEntity entity);
+        Task UpdateEntityAsync(TEntity entity);
+        Task DeleteAsync(TEntity entity);
     }
 }
