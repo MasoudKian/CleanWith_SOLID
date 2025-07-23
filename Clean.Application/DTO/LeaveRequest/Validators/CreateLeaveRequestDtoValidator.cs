@@ -1,4 +1,4 @@
-﻿using Clean.Application.Persistence.Contract.EntitiesRepository;
+﻿using Clean.Application.Contracts.Persistence.EntitiesRepository;
 using FluentValidation;
 using System;
 using System.Collections.Generic;

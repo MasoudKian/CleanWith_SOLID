@@ -1,4 +1,4 @@
-﻿namespace Clean.Application.Persistence.Contract
+﻿namespace Clean.Application.Contracts.Persistence
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {

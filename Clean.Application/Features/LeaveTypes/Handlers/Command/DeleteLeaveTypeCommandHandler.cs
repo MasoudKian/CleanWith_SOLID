@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using Clean.Application.Contracts.Persistence.EntitiesRepository;
 using Clean.Application.Exceptions;
 using Clean.Application.Features.LeaveTypes.Requests.Command;
-using Clean.Application.Persistence.Contract.EntitiesRepository;
 using Clean.Domain.Models;
 using MediatR;
 using System;

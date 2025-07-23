@@ -1,4 +1,4 @@
-﻿using Clean.Application.Persistence.Contract.EntitiesRepository;
+﻿using Clean.Application.Contracts.Persistence.EntitiesRepository;
 using Clean.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System;

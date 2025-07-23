@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using Clean.Application.Contracts.Persistence.EntitiesRepository;
 using Clean.Application.DTO.LeaveRequest.Validators;
 using Clean.Application.Exceptions;
 using Clean.Application.Features.LeaveRequests.Requests.Command;
-using Clean.Application.Persistence.Contract.EntitiesRepository;
 using MediatR;
 using System;
 using System.Collections.Generic;

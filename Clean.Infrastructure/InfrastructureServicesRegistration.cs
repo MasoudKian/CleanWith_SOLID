@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Clean.Application.Contracts.Infrastructure;
+using Clean.Application.Models;
+using Clean.Infrastructure.Mail;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,8 +17,9 @@ namespace Clean.Infrastructure
        IConfiguration configuration)
         {
 
-            //services.Configure<EmailSetting>(configuration.GetSection("EmailSettings"));
-            //services.AddTransient<IEmailSender, EmailSender>();
+            services.Configure<EmailSetting>(configuration.GetSection("EmailSettings"));
+            // Every need a new sample
+            services.AddTransient<IEmailSender, EmailSender>();
 
             return services;
         }

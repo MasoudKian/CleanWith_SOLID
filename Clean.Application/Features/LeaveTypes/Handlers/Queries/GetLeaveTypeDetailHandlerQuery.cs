@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using Clean.Application.Contracts.Persistence.EntitiesRepository;
 using Clean.Application.DTO.LeaveType;
 using Clean.Application.Features.LeaveTypes.Requests.Queries;
-using Clean.Application.Persistence.Contract.EntitiesRepository;
 using MediatR;
 
 namespace Clean.Application.Features.LeaveTypes.Handlers.Queries

@@ -1,4 +1,4 @@
-﻿using Clean.Application.Persistence.Contract;
+﻿using Clean.Application.Contracts.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System.Xml.Linq;
 

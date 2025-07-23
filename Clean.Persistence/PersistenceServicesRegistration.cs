@@ -1,5 +1,5 @@
-﻿using Clean.Application.Persistence.Contract;
-using Clean.Application.Persistence.Contract.EntitiesRepository;
+﻿using Clean.Application.Contracts.Persistence;
+using Clean.Application.Contracts.Persistence.EntitiesRepository;
 using Clean.Persistence.Repositories;
 using Clean.Persistence.Repositories.EntitiesRepository;
 using Microsoft.EntityFrameworkCore;

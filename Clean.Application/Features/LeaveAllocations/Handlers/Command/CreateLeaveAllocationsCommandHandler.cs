@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using Clean.Application.Contracts.Persistence.EntitiesRepository;
 using Clean.Application.DTO.LeaveAllocation.Validators;
 using Clean.Application.Exceptions;
 using Clean.Application.Features.LeaveAllocations.Requests.Command;
-using Clean.Application.Persistence.Contract.EntitiesRepository;
 using Clean.Domain.Models;
 using MediatR;
 using System;
