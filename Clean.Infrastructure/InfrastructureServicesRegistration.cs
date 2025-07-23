@@ -13,7 +13,7 @@ namespace Clean.Infrastructure
 {
     public static class InfrastructureServicesRegistration
     {
-        public static IServiceCollection ConfigureInfrastractureServices(this IServiceCollection services,
+        public static IServiceCollection ConfigureInfrastructureServices(this IServiceCollection services,
        IConfiguration configuration)
         {
 
