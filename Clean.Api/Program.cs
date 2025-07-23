@@ -4,29 +4,34 @@ using Clean.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// ✅ اینا قبل از Build باید باشه
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-var app = builder.Build();
-
-//تاbuilder.Services.ConfigureApplicationServices();
+builder.Services.ConfigureApplicationServices();
 builder.Services.ConfigurePersistenceServices(builder.Configuration);
 builder.Services.ConfigureInfrastructureServices(builder.Configuration);
 //builder.Services.ConfigureIdentityServices(builder.Configuration);
 
-// Configure the HTTP request pipeline.
+builder.Services.AddCors(o =>
+{
+    o.AddPolicy("CorsPolicy", b =>
+        b.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+    );
+});
+
+// ✅ بعد از اینکه همه سرویس‌ها Configure شدن، Build کن
+var app = builder.Build();
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
+app.UseCors("CorsPolicy");
 app.MapControllers();
-
 app.Run();

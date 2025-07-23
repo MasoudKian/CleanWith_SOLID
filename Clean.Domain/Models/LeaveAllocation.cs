@@ -1,6 +1,8 @@
-﻿namespace Clean.Domain.Models
+﻿using Clean.Domain.Common;
+
+namespace Clean.Domain.Models
 {
-    public class LeaveAllocation
+    public class LeaveAllocation : BaseDomainEntity
     {
         public int NumberOfDays { get; set; }
         public LeaveType? LeaveType { get; set; }
