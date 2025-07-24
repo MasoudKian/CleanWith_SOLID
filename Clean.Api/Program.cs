@@ -28,6 +28,7 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
+    // Debug set Release
     app.MapScalarApiReference();
     app.MapOpenApi();
     app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json","Example api"));

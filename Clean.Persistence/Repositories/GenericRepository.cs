@@ -1,4 +1,5 @@
 ﻿using Clean.Application.Contracts.Persistence;
+using Clean.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Xml.Linq;
 
@@ -12,6 +13,8 @@ namespace Clean.Persistence.Repositories
         {
             _context = context;
         }
+
+
         public async Task<TEntity> CreateAsync(TEntity entity)
         {
             await _context.AddAsync(entity);
