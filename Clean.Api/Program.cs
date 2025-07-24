@@ -30,6 +30,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapScalarApiReference();
     app.MapOpenApi();
+    app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json","Example api"));
 }
 
 app.UseHttpsRedirection();
